@@ -1,0 +1,21 @@
+$breakpoints: (
+  'extra-small': (max-width: 480px),
+  'small': (max-width: 767px),
+  'medium': (max-width: 992px),
+  'large-screen': (max-width: 1440px),
+);
+
+//Fonts
+
+$main-font: 'Quattrocento Sans', sans-serif;
+$title-font: 'Quattrocento', serif;
+$nav-font: 'Roboto', sans-serif;
+
+//Color
+$theme-color: #0092de;
+$light-color: #ffffff;
+$dark-color: #000000;
+$text-color: #474747;
+$nav-color: #16242e;
+$border-color: #ededed;
+$placeholder-color: #9b9b9b;

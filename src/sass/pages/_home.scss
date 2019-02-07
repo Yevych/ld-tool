@@ -1,0 +1,612 @@
+//Banner
+
+.banner {
+  padding: 71px 0 174px;
+  background: url("../img/main-banner.jpg") center center no-repeat;
+  background-size: cover;
+  @include respond-to('medium') {
+    padding: 51px 0 124px;
+  }
+  &__logo {
+    text-align: center;
+  }
+  &__content {
+    max-width: 674px;
+    margin: 74px auto 0;
+    color: $light-color;
+    &__title {
+      margin-bottom: 40px;
+      font-family: $title-font;
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 43px;
+      text-transform: uppercase;
+      text-align: center;
+      @include respond-to('large-screen') {
+        font-size: calc((100vw - 320px) / (1400 - 320) * (45 - 30) + 30px);
+      }
+      @include respond-to('extra-small') {
+        line-height: 36px;
+      }
+    }
+    &__description {
+      margin: 0;
+      font-family: $main-font;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 31px;
+      @include respond-to('large-screen') {
+        font-size: calc((100vw - 320px) / (1400 - 320) * (20 - 17) + 17px);
+      }
+      @include respond-to('extra-small') {
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+//Certificate
+
+.certificate {
+  padding: 48px 0 65px;
+  @include respond-to('medium') {
+    padding: 38px 0 45px;
+  }
+  &__content {
+    max-width: 789px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 26px;
+    color: $dark-color;
+    font-family: $main-font;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 23px;
+    @include respond-to('large-screen') {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (27 - 23) + 23px);
+    }
+  }
+  &__btn {
+    display: inline-block;
+    padding: 3px 16px;
+    background-color: transparent;
+    border: 1px solid $theme-color;
+    margin-bottom: 32px;
+    cursor: pointer;
+    transition: all .2s;
+    a {
+      color: $theme-color;
+      font-family: $main-font;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1;
+    }
+    &:hover {
+      background-color: $theme-color;
+      transition: all .2s;
+      a {
+        color: $light-color;
+      }
+    }
+  }
+  &__description {
+    font-family: $main-font;
+    font-size: 18px;
+    line-height: 21px;
+    color: $dark-color;
+    @include respond-to('large-screen') {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (18 - 16) + 16px);
+    }
+    strong {
+      color: $text-color;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 13px;
+      @include respond-to('large-screen') {
+        font-size: calc((100vw - 320px) / (1400 - 320) * (18 - 16) + 16px);
+      }
+    }
+  }
+}
+
+//Why choose us
+
+.choose {
+  position: relative;
+  padding: 50px 0 65px;
+  background: url("../img/choose-us.jpg") center center no-repeat;
+  background-size: cover;
+  @include respond-to('medium') {
+    padding: 40px 0 55px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .75;
+    background-color: #16242e;
+    z-index: 1;
+  }
+  &__description {
+    margin: 70px auto 60px;
+    max-width: 608px;
+    color: $light-color;
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+    @include respond-to('large-screen') {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (18 - 16) + 16px);
+    }
+    @include respond-to('medium') {
+      margin-top: 50px;
+    }
+  }
+  &__wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include respond-to('medium') {
+      flex-direction: column;
+    }
+  }
+  &__col {
+    display: flex;
+    width: 33.33%;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include respond-to('medium') {
+      width: 100%;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__item {
+    padding: 45px 23px 30px 33px;
+    background-color: $light-color;
+    @include respond-to('medium') {
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    &__flex {
+      display: flex;
+      align-items: center;
+    }
+    &__title {
+      margin-left: 10px;
+      margin-bottom: 0;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 700;
+      color: $text-color;
+      line-height: 21px;
+      text-transform: uppercase;
+    }
+    &__description {
+      margin-top: 20px;
+      font-family: $main-font;
+      font-size: 13px;
+      font-weight: 400;
+      color: $text-color;
+      line-height: 21px;
+    }
+  }
+}
+
+//Difference
+
+.difference {
+  padding: 70px 0 80px;
+  @include respond-to('medium') {
+    padding: 50px 0 60px;
+  }
+  &__title {
+    display: inline-block;
+    margin-top: 70px;
+    position: relative;
+    padding-bottom: 20px;
+    color: $dark-color;
+    font-family: $title-font;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 21px;
+    border-bottom: 2px solid $theme-color;
+    text-transform: uppercase;
+    @include respond-to('large-screen') {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (27 - 22) + 22px);
+    }
+    @include respond-to('medium') {
+      margin-top: 50px;
+    }
+    @include respond-to('extra-small') {
+      padding-bottom: 10px;
+    }
+  }
+  &__content {
+    position: relative;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include respond-to('small') {
+      flex-direction: column;
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $border-color;
+      position: absolute;
+      left: 0;
+      top: -1px;
+      z-index: -1;
+    }
+  }
+  &__item:nth-child(odd) &__content {
+    flex-direction: row-reverse;
+    @include respond-to('small') {
+      flex-direction: column-reverse;
+    }
+    .difference__image {
+      padding-left: 0;
+      padding-right: 15px;
+      @include respond-to('small') {
+        padding-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+    .difference__text {
+      padding-right: 0;
+      padding-left: 15px;
+      @include respond-to('small') {
+        padding-left: 0;
+      }
+    }
+  }
+  &__text {
+    padding-right: 20px;
+    max-width: 545px;
+    color: $text-color;
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    @include respond-to('small') {
+      padding-right: 0;
+    }
+    @include respond-to('large-screen') {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (18 - 15) + 15px);
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    &__list {
+      margin: 30px 0 30px 40px;
+      li {
+        list-style: disc;
+      }
+    }
+  }
+  &__image {
+    padding-left: 15px;
+    @include respond-to('small') {
+      padding-left: 0;
+    }
+  }
+}
+
+//Review
+
+.review {
+  position: relative;
+  padding: 60px 0 70px;
+  background: url("../img/bulgarien.jpg") center center no-repeat;
+  background-size: cover;
+  @include respond-to('medium') {
+    padding: 40px 0 50px;
+  }
+  &__slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 50px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .8;
+    background-color: #293946;
+    z-index: 1;
+  }
+  &__col {
+    display: flex;
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: none;
+  }
+  &__item {
+    padding: 60px 60px 80px;
+    background-color: $light-color;
+    text-align: center;
+    @include respond-to('medium') {
+      padding: 40px 40px 60px;
+    }
+    @include respond-to('small') {
+      padding: 30px 30px 50px;
+    }
+    &__author {
+      display: inline-block;
+      font-family: $main-font;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $text-color;
+      border-bottom: 2px solid $theme-color;
+      @include respond-to('large-screen') {
+        font-size: calc((100vw - 320px) / (1400 - 320) * (18 - 16) + 16px);
+      }
+    }
+    blockquote {
+      position: relative;
+      margin: 35px 0 0;
+      font-family: $main-font;
+      font-size: 14px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 20px;
+      @include respond-to('large-screen') {
+        font-size: calc((100vw - 320px) / (1400 - 320) * (14 - 12) + 12px);
+      }
+      &:before {
+        content: '\f10d';
+        position: absolute;
+        font-family: "Font Awesome 5 Free", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #cccccc;
+        left: 0;
+        top: -28px;
+        display: block;
+        @include respond-to('large-screen') {
+          font-size: calc((100vw - 320px) / (1400 - 320) * (28 - 20) + 20px);
+        }
+      }
+      &:after {
+        content: '\f10e';
+        position: absolute;
+        font-family: "Font Awesome 5 Free", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #cccccc;
+        right: 0;
+        bottom: -28px;
+        display: block;
+        @include respond-to('large-screen') {
+          font-size: calc((100vw - 320px) / (1400 - 320) * (28 - 20) + 20px);
+        }
+      }
+    }
+  }
+}
+
+//Learn
+
+.learn {
+  padding: 80px 0;
+  @include respond-to('medium') {
+    padding: 60px 0;
+  }
+  & h2 {
+    margin-bottom: 50px;
+  }
+  &__row {
+    margin: 0 -15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+  &__col {
+    display: flex;
+    width: 25%;
+    padding: 0 15px;
+    @include respond-to('medium') {
+      width: 50%;
+      margin-bottom: 15px;
+      &:nth-child(n+3) {
+        margin-bottom: 0;
+      }
+    }
+    @include respond-to('extra-small') {
+      width: 100%;
+      &:nth-child(3) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    max-width: 263px;
+    border: 1px solid $border-color;
+    @include respond-to('medium') {
+      max-width: 100%;
+    }
+    &__image img {
+      width: 100%;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background-color: $theme-color;
+      transition: all .3s;
+    }
+    &:hover:after {
+      width: 100%;
+      transition: all .3s;
+    }
+  }
+  &__header {
+    min-height: 84px;
+    padding: 20px 15px;
+    border-bottom: 1px solid $border-color;
+    h3 {
+      color: $text-color;
+      font-family: $title-font;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      text-transform: uppercase;
+      @include respond-to('large-screen') {
+        font-size: calc((100vw - 320px) / (1400 - 320) * (18 - 16) + 16px);
+      }
+    }
+  }
+  &__text {
+    padding: 20px 15px;
+    p {
+      margin: 0;
+      color: $text-color;
+      font-family: $main-font;
+      font-size: 15px;
+      line-height: 23px;
+      @include respond-to('large-screen') {
+        font-size: calc((100vw - 320px) / (1400 - 320) * (15 - 13) + 13px);
+      }
+    }
+  }
+}
+
+//Started
+
+.started {
+  padding: 60px 0;
+  background-color: #f8f8f8;
+  @include respond-to('medium') {
+    padding: 40px 0;
+  }
+  &__description {
+    margin: 18px auto 30px auto;
+    max-width: 753px;
+    color: $text-color;
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    @include respond-to('large-screen') {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (18 - 16) + 16px);
+    }
+  }
+  &__form {
+    max-width: 462px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 40px 20px;
+    background-color: $light-color;
+    @include respond-to('extra-small') {
+      padding: 30px 30px 20px;
+    }
+    input, textarea, select {
+      padding: 15px 20px;
+      margin-bottom: 10px;
+      max-width: 386px;
+      width: 100%;
+      color: $placeholder-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1;
+      outline: none;
+      border: 1px solid #d1d1d1;
+      &:active, &:focus {
+        border: 1px solid darken($border-color, 30%);
+      }
+    }
+    input[type=checkbox] {
+      display: none;
+      &:checked + label:before {
+        content: '\f00c';
+        font-family: "Font Awesome 5 Free", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        color: $theme-color;
+      }
+    }
+    label {
+      position: relative;
+      margin: 0 0 35px 20px;
+      color: $placeholder-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      cursor: pointer;
+      @include respond-to('large-screen') {
+        font-size: calc((100vw - 320px) / (1400 - 320) * (15 - 13) + 13px);
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        border: 1px solid #d1d1d1;
+        transform: translate(0, 2px);
+        color: transparent;
+      }
+    }
+    textarea {
+      min-height: 118px;
+      resize: none;
+    }
+    select {
+      padding: 15px 20px;
+    }
+    &__btn {
+      display: block;
+      margin: 0 auto;
+      padding: 15px 20px;
+      background-color: $theme-color;
+      color: $light-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        background-color: lighten($theme-color, 5%);
+      }
+    }
+  }
+}

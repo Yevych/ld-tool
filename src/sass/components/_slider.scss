@@ -1,0 +1,50 @@
+.review__slider {
+  .left-arrow {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: -15px;
+    border-right: 2px solid #606060;
+    border-top: 2px solid #606060;
+    transform: rotate(-135deg);
+    cursor: pointer;
+    transition: all .2s;
+    @include respond-to('small') {
+      left: -10px;
+    }
+    &:hover {
+      border-right: 2px solid $theme-color;
+      border-top: 2px solid $theme-color;
+      transition: all .2s;
+    }
+  }
+  .right-arrow {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: -15px;
+    border-right: 2px solid #606060;
+    border-top: 2px solid #606060;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: all .2s;
+    @include respond-to('small') {
+      right: -10px;
+    }
+    &:hover {
+      border-right: 2px solid $theme-color;
+      border-top: 2px solid $theme-color;
+      transition: all .2s;
+    }
+  }
+}
+
+

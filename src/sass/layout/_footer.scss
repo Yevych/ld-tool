@@ -1,0 +1,40 @@
+footer {
+  padding: 30px 0;
+  background-color: $nav-color;
+  text-align: center;
+  .footer {
+    border-bottom: 1px solid #404b53;
+    &__info {
+      color: $light-color;
+      font-family: $main-font;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 21px;
+      @include respond-to('large-screen') {
+        font-size: calc((100vw - 320px) / (1400 - 320) * (18 - 16) + 16px);
+      }
+    }
+    &__btn {
+      display: inline-block;
+      margin: 25px 0 30px;
+      padding: 15px 30px;
+      background-color: $theme-color;
+      color: $light-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22px;
+      &:hover {
+        background-color: lighten($theme-color, 5%);
+      }
+    }
+    &__copy {
+      margin-top: 15px;
+      color: $light-color;
+      font-family: $nav-font;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 25px;
+    }
+  }
+}
